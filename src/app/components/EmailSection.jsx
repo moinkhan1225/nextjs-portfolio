@@ -4,12 +4,21 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import emailjs from '@emailjs/browser';
+
 
 const EmailSection = () => {
+  const [email,setEmail] = useState('');
+  const [subject,setSubject] = useState('');
+  const [message,setMessage] = useState('');
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const serviceId = "service_9srn0rg";
+    const templateID = "template_yicnyju";
+    const publicKey = "6eKicm8rQAi3XiacH";
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
@@ -17,6 +26,18 @@ const EmailSection = () => {
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
+
+    emailjs.send(serviceId,templateID,data,publicKey)
+      .then((response)=>{
+        alert("Your Message has been sent Sucessfully!");
+        console.log('Email sent Sucessfully!',response);
+        setEmail('');
+        setSubject('');
+        setMessage('');
+      })
+      .catch((error)=>{
+        console.error('Error Sending mail:',error)
+      })
 
     // Form the request for sending data to the server.
     const options = {
@@ -56,10 +77,10 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://www.github.com/moinkhan1225">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="https://www.linkedin.com/in/moin-khan-19b53526b">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
