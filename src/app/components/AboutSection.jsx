@@ -23,8 +23,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Bachelor's in Information Technology(2018-2021) - Cluster Univerity,Srinagar</li>
-        <li>Master's in Information Technology (2021-2024) - Cluster Univerity,Srinagar</li>
+        <li>{`Bachelor's in Information Technology(2018-2021) - Cluster Univerity,Srinagar`}</li>
+        <li>{`Master's in Information Technology (2021-2024) - Cluster Univerity,Srinagar`}</li>
       </ul>
     ),
   },
