@@ -9,12 +9,16 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>HTML5</li>
-        <li>Mongo DB</li>
-        <li>JavaScript</li>
+        <li>Javascript</li>
         <li>React</li>
+        <li>Next JS</li>
+        <li>Mongo DB</li>
+        <li>MySQL</li>
+        <li>Express</li>
+        <li>Node JS</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
       </ul>
     ),
   },
@@ -33,8 +37,7 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>FreeCodeCamp Certification - Back End Development and APIs</li>
       </ul>
     ),
   },
