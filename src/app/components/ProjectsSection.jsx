@@ -38,7 +38,7 @@ const projectsData = [
     description: "Embark on a journey with VoyageVerse, your ultimate travel companion app. Discover new destinations, plan your trips, and share your adventures with fellow travelers.",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
-    // gitUrl: "/",
+    gitUrl: "/",
     previewUrl: "https://voyageverse-nextjs.vercel.app/",
   },
   {
