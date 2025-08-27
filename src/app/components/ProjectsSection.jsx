@@ -32,17 +32,26 @@ const projectsData = [
     gitUrl: "https://github.com/moinkhan1225/nextjs-portfolio",
     previewUrl: "https://moinkhan.vercel.app",
   },
-  {
+   {
     id: 4,
+    title: "MegaETH NFT Explorer",
+    description: "Explore any wallet's MegaETH NFT holdings without connecting, and quickly gain insights into NFT collections.",
+    image: "/images/projects/7.png",
+    tag: ["All", "Web", "Web3"],
+    gitUrl: "https://github.com/moinkhan1225/MegaETHNFTExplorer",
+    previewUrl: "https://megaeth-nft-explorer.vercel.app/",
+  },
+  {
+    id: 5,
     title: "VoyageVerse Your Ultimate Travel Companion",
     description: "Embark on a journey with VoyageVerse, your ultimate travel companion app. Discover new destinations, plan your trips, and share your adventures with fellow travelers.",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "https://voyageverse-nextjs.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Random Quote Generator",
     description: "Generate random quotes and share your favorites.",
     image: "/images/projects/5.png",
@@ -51,7 +60,7 @@ const projectsData = [
     previewUrl: "https://rand0m-qu0te-generator.netlify.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Drum Machine",
     description: "Create beats and rhythms with this interactive drum machine.",
     image: "/images/projects/6.png",
@@ -59,6 +68,7 @@ const projectsData = [
     gitUrl: "https://github.com/moinkhan1225/DrumMachine",
     previewUrl: "https://beamish-cannoli-fe38ed.netlify.app/",
   },
+ 
 ];
 
 const ProjectsSection = () => {
@@ -95,10 +105,11 @@ const ProjectsSection = () => {
           name="Web"
           isSelected={tag === "Web"}
         />
+       
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Web3"
+          isSelected={tag === "Web3"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
