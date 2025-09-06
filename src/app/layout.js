@@ -10,10 +10,7 @@ export const metadata = {
   },
   description: 'Frontend Developer skilled in Next.js, React, and Tailwind CSS. Explore my portfolio projects and hire me for freelance work.',
   keywords: ['Full Stack Developer','Next.js Developer', 'Frontend Developer', 'React Developer', 'Backend Developer','UI/UX','Tailwind CSS', 'Portfolio', 'Javascript', 'WordPress', 'HTML', 'CSS','MongoDB','SQL'],
-  metadataBase: new URL("https://moinkhan.site"),
-  alternates: {
-    canonical: "/",
-  },
+  
   openGraph: {
     title: 'Moin Khan | Frontend Developer',
     description: 'Portfolio showcasing Next.js and React projects.',
@@ -38,6 +35,9 @@ export const metadata = {
     creator: '@khan__moin',
   },
   metadataBase: new URL('https://www.moinkhan.site'),
+    alternates: {
+    canonical: "/",
+  },
 }
 
 export default function RootLayout({ children }) {
