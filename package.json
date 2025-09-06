@@ -1,12 +1,12 @@
-
 {
   "name": "portfolio-website",
   "version": "0.1.0",
-    "engines":{
-  "node":"22.x"
-},
+  "engines": {
+    "node": "22.x"
+  },
   "private": true,
   "scripts": {
+    "postbuild": "next-sitemap",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -21,6 +21,7 @@
     "eslint-config-next": "13.4.15",
     "framer-motion": "^10.16.1",
     "next": "13.4.15",
+    "next-sitemap": "^4.2.3",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-animated-numbers": "^0.16.0",

@@ -3,6 +3,12 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 
+export const metadata = {
+  title: 'About Me',
+  description: 'Learn more about Moin Khan, a frontend developer experienced in React, Next.js, and building responsive web apps.',
+}
+ 
+
 const TAB_DATA = [
   {
     title: "Skills",
@@ -54,6 +60,7 @@ const AboutSection = () => {
   };
 
   return (
+    
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src="/images/about-image.jpeg" width={500} height={500} />
