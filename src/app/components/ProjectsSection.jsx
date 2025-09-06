@@ -37,7 +37,7 @@ const projectsData = [
     title: "MegaETH NFT Explorer",
     description: "Explore any wallet's MegaETH NFT holdings without connecting, and quickly gain insights into NFT collections.",
     image: "/images/projects/7.png",
-    tag: ["All", "Web", "Web3"],
+    tag: ["All", "Web3"],
     gitUrl: "https://github.com/moinkhan1225/MegaETHNFTExplorer",
     previewUrl: "https://megaeth-nft-explorer.vercel.app/",
   },
