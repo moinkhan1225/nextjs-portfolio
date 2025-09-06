@@ -10,6 +10,7 @@ const projectsData = [
     title: "MovieLand - Movie Search App",
     description: "Crafted a Movie Search App using React, utilizing API calls for dynamic movie details retrieval.",
     image: "/images/projects/movie-4.jpg",
+    alt:"Project preivew image",
     tag: ["All", "Web"],
     gitUrl: "https://www.github.com/moinkhan1225/movie-app.git",
     previewUrl: "https://movie-app-five-theta.vercel.app/",
@@ -19,6 +20,7 @@ const projectsData = [
     title: "Meme-Generator using React",
     description: "Designed a Meme Generator leveraging React and fetching memes dynamically from an API. This interactive app provides users with a humorous and customizable experience",
     image: "/images/projects/meme-3.jpg",
+    alt:"Project preivew image",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/moinkhan1225/meme-generator",
     previewUrl: "https://meme-generator-65kk.vercel.app/",
@@ -28,6 +30,7 @@ const projectsData = [
     title: "Portfolio using Next-JS",
     description: "Experience my Next.js portfolio—a sleek, responsive showcase of my projects, powered by the efficiency of server-side rendering for seamless browsing",
     image: "/images/projects/portfolio-2.jpg",
+    alt:"Project preivew image",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/moinkhan1225/nextjs-portfolio",
     previewUrl: "https://moinkhan.vercel.app",
@@ -37,6 +40,7 @@ const projectsData = [
     title: "MegaETH NFT Explorer",
     description: "Explore any wallet's MegaETH NFT holdings without connecting, and quickly gain insights into NFT collections.",
     image: "/images/projects/7.png",
+    alt:"Project preivew image",
     tag: ["All", "Web3"],
     gitUrl: "https://github.com/moinkhan1225/MegaETHNFTExplorer",
     previewUrl: "https://megaeth-nft-explorer.vercel.app/",
@@ -46,6 +50,7 @@ const projectsData = [
     title: "VoyageVerse Your Ultimate Travel Companion",
     description: "Embark on a journey with VoyageVerse, your ultimate travel companion app. Discover new destinations, plan your trips, and share your adventures with fellow travelers.",
     image: "/images/projects/4.png",
+    alt:"Project preivew image",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "https://voyageverse-nextjs.vercel.app/",
@@ -55,6 +60,7 @@ const projectsData = [
     title: "Random Quote Generator",
     description: "Generate random quotes and share your favorites.",
     image: "/images/projects/5.png",
+    alt:"Project preivew image",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/moinkhan1225/RandomQuoteMachine",
     previewUrl: "https://rand0m-qu0te-generator.netlify.app/",
@@ -64,6 +70,7 @@ const projectsData = [
     title: "Drum Machine",
     description: "Create beats and rhythms with this interactive drum machine.",
     image: "/images/projects/6.png",
+    alt:"Project preivew image",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/moinkhan1225/DrumMachine",
     previewUrl: "https://beamish-cannoli-fe38ed.netlify.app/",
@@ -125,7 +132,7 @@ const ProjectsSection = () => {
               key={project.id}
               title={project.title}
               description={project.description}
-              imgUrl={project.image}
+              imgUrl={project.image || project.alt}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />

@@ -48,6 +48,9 @@ export const metadata = {
     creator: "@khan__moin",
   },
   metadataBase: new URL("https://moinkhan.site"), 
+   alternates: {
+    canonical: "/",
+  },
 };
 
 export default function Home() {
