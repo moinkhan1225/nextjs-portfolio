@@ -49,7 +49,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://moinkhan.site"), 
    alternates: {
-    canonical: "/",
+    canonical: "https://moinkhan.site/", // ✅ full canonical URL
   },
 };
 

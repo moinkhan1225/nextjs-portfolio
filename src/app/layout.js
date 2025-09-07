@@ -6,15 +6,31 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: {
     default: 'Moin Khan | Full Stack Developer',
-    template: '%s | Moin Khan'
+    template: '%s | Moin Khan',
   },
-  description: 'Frontend Developer skilled in Next.js, React, and Tailwind CSS. Explore my portfolio projects and hire me for freelance work.',
-  keywords: ['Full Stack Developer','Next.js Developer', 'Frontend Developer', 'React Developer', 'Backend Developer','UI/UX','Tailwind CSS', 'Portfolio', 'Javascript', 'WordPress', 'HTML', 'CSS','MongoDB','SQL'],
-  
+  description:
+    'Frontend Developer skilled in Next.js, React, and Tailwind CSS. Explore my portfolio projects and hire me for freelance work.',
+  keywords: [
+    'Full Stack Developer',
+    'Next.js Developer',
+    'Frontend Developer',
+    'React Developer',
+    'Backend Developer',
+    'UI/UX',
+    'Tailwind CSS',
+    'Portfolio',
+    'Javascript',
+    'WordPress',
+    'HTML',
+    'CSS',
+    'MongoDB',
+    'SQL',
+  ],
+
   openGraph: {
     title: 'Moin Khan | Frontend Developer',
     description: 'Portfolio showcasing Next.js and React projects.',
-    url: 'https://www.moinkhan.site',
+    url: 'https://moinkhan.site', // ✅ consistent domain
     siteName: 'Moin Khan Portfolio',
     images: [
       {
@@ -30,13 +46,14 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Moin Khan | Frontend Developer',
-    description: 'Frontend Developer skilled in Next.js, React, Tailwind CSS, and MongoDB.',
+    description:
+      'Frontend Developer skilled in Next.js, React, Tailwind CSS, and MongoDB.',
     images: ['https://moinkhan.site/images/projects/portfolio.jpg'],
     creator: '@khan__moin',
   },
-  metadataBase: new URL('https://www.moinkhan.site'),
-    alternates: {
-    canonical: "/",
+  metadataBase: new URL('https://moinkhan.site'), // ✅ canonical domain
+  alternates: {
+    canonical: 'https://moinkhan.site/', // ✅ explicit canonical
   },
 }
 
