@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import Logo from 'next/image';
+import { ArrowRight } from "lucide-react";
 
 const navLinks = [
   {
@@ -16,7 +17,7 @@ const navLinks = [
     path: "#projects",
   },
   {
-    title: "Contact",
+    title: "Let's Connect",
     path: "#contact",
   },
 ];
@@ -59,7 +60,30 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+               <NavLink
+                    href={link.path}
+                    title={
+              <span className="inline-flex items-center gap-0 transition-all duration-300">
+                    {link.title}
+                    {link.title === "Let's Connect" && (
+                <span className="opacity-0 group-hover:opacity-100 ml-0 group-hover:ml-2 transition-all duration-300">
+                    <ArrowRight className="w-4 h-4" />
+                </span>
+           )}
+              </span>
+                          }
+                    className={`
+                     group
+                     ${link.title === "Let's Connect" 
+                       ? "bg-gradient-to-br from-primary-500 to-secondary-500 text-white" 
+                       : "text-white"}
+                     px-4 py-2 rounded-full 
+                     transition-all duration-500 ease-in-out 
+                     hover:brightness-110 hover:-translate-y-1 hover:shadow-md
+                    `}
+                />
+
+
               </li>
             ))}
           </ul>

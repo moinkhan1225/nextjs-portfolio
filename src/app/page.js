@@ -5,6 +5,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import AchievementsSection from "./components/AchievementsSection";
+import AppointmentBooking from "./components/AppointBooking";
 
 export const metadata = {
   title: "Moin Khan | Frontend Developer Portfolio",
@@ -62,7 +63,8 @@ export default function Home() {
         <AchievementsSection />
         <AboutSection />
         <ProjectsSection />
-        <EmailSection />
+        {/* <EmailSection />  */}
+        <AppointmentBooking/>
       </div>
       <Footer />
     </main>

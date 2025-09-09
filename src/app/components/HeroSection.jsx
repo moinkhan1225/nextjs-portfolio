@@ -38,15 +38,82 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          a passionate and detail-oriented Full Stack Web Developer with expertise in creating dynamic and user-friendly web applications
-          </p>
+  I help{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    businesses
+  </span>{" "} 
+  transform their{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    online presence
+  </span>{" "} 
+  into{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    modern, user-centric web applications
+  </span>{" "} 
+  that drive{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    engagement
+  </span>{" "} 
+  and{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    growth
+  </span>. Whether you're looking to{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    redesign your website
+  </span>,{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    add new features
+  </span>,{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    improve user experience
+  </span>, or{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    boost your SEO
+  </span>, I'm here to{" "}
+  <span className="font-bold text-white bg-purple-600/30 px-1 rounded transition-all duration-300 hover:bg-purple-500/50">
+    bring your vision to life
+  </span>.
+</p>
+
+
+
           <div>
-            <Link
-              href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
-            >
-              Hire Me
-            </Link>
+       <Link
+  href="#contact"
+  onClick={(e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (!contactSection) return;
+
+    const targetPosition = contactSection.offsetTop; // position of section
+    const startPosition = window.scrollY; // current scroll
+    const distance = targetPosition - startPosition;
+    const duration = 1500; // duration in ms (adjust for speed)
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = ease(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // ease function for smooth effect
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+  }}
+  className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+>
+  Hire Me
+</Link>
+
             <Link
               href="https://drive.google.com/file/d/1V2iC8FvC11bE4jKu4XWc_JXCcN2tXrN1/view?pli=1" 
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
