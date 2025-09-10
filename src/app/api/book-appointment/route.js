@@ -77,6 +77,21 @@ export async function POST(req) {
         </div>
       `,
 });
+    await resend.emails.send({
+  from: "Your App <noreply@moinkhan.site>",
+  to: "moinkhanbusinessid@gmail.com", // your email
+  subject: "📩 New Appointment Booked",
+  html: `
+    <p>A new appointment has been booked.</p>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Date:</strong> ${date}</p>
+    <p><strong>Time:</strong> ${time}</p>
+    <p><strong>Notes:</strong> ${notes}</p>
+    <p><strong>Meeting Link:</strong> ${data.eventLink}</p>
+  `,
+});
+
     } catch (err) {
       console.error("Email send failed:", err);
     }
