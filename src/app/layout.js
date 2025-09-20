@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-       {/* Google Analytics */}
+      {/* ✅ Google Analytics (loads only in client, avoids build-time fetch) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-21LSLC6JHW"
           strategy="afterInteractive"
