@@ -1,3 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Sitemap: https://moinkhan.site/sitemap.xml
+
+# Host
+Host: https://www.moinkhan.site
+
+# Sitemaps
+Sitemap: https://www.moinkhan.site/sitemap.xml
